@@ -1,0 +1,35 @@
+<!-- Container for create Issue page -->
+<body>
+    
+    <div class="container1" id="additional">
+        
+        <div class="container">
+            <h1 class="heading">Create Issue </h1>
+
+            <div class="createIssueContainer">
+
+                <div id="nameP" display="inline"><p class="projectName" style="font-size: 1.4rem;">Project: <span class="namep"><%- project.projectName %></span></p></div>
+                
+                <!-- Form to create an issue -->
+                <form id="createProjectForm" action="" method="POST">
+                    <input name="title" type="text" class="margin" placeholder="Issue Title" required>
+                    <textarea rows="3" class="margin"name="description" placeholder="Description..." required></textarea>
+                    <!-- Author and submit button -->
+                    <input name="author" type="text" class="margin" placeholder="Issue Raised by..." required>
+                    <div class="labelContainer">
+                        <label for="label" id="labelDropdown">Label: </label>
+                        <!-- Dropdown list -->
+                        <select name="label" id="label" >
+                            <option class="option" value="Bug">Bug</option>
+                            <option class="option" value="UI">UI</option>
+                            <option class="option" value="Type Error">Type Error</option>
+                            <option class="option" value="Syntax Error">Syntax Error</option>
+                            <option class="option" value="Line Others">Others</option>
+                         </select>
+                    </div>
+                    <input type="submit" id="subBtn" class="margin" value="Create Issue">
+                </form>
+            </div>
+        </div>
+    </div> 
+</body>

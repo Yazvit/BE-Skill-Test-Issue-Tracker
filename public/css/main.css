@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap');
+
+:root{
+    --clr-navitem-bg:rgb(255, 255, 255);
+    --clr-nav-txt:#050505;
+    --clr-nav-bg:rgb(0, 0, 0);
+}
+
+.navigationBar{
+    margin-top:0;
+    height:10vh;
+    width: 100vw;
+    background-color: var(--clr-nav-bg);
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+.leftNav{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left:3rem;
+}
+.leftNav .logo{
+    scale: 1.8;
+    color: var(--clr-navitem-bg);
+    color: limegreen;
+    color: white;
+    /* color: orange; */
+}
+#logospan{
+    color: rgb(255, 255, 255); 
+    font-weight: 600; 
+    font-size: 1.8rem; 
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+.rightNav{
+    margin-right: 2.5em;
+}
+.rightNav a{
+    color: var(--clr-nav-txt);
+    background-color: var(--clr-navitem-bg);
+    font-weight: 500;
+    font-size:1.3rem;
+    border-radius:1.5rem;
+    padding: .3rem .8rem;
+    text-decoration:none;
+    font-family:'Poppins',sans-serif;
+    transition: all .2s ease-in-out;
+}
+.rightNav a:hover{
+    scale: 0.9;
+
+}
+.rightNav a:active{
+    scale: 0.6;
+    border: 4px dotted white;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    transition: 1s;
+}

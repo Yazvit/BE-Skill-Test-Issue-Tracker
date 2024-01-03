@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;  
+}
+
+input {
+   caret-color: rgb(71, 71, 71);
+}
+
+body {
+    margin-top: 0 ;
+    width: 100vw;
+    height: 100vh;
+    background: #8f979d;
+    background: #888888;
+    background: #ecf0f3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    place-items: center;
+    overflow: hidden;
+    font-family: 'Poppins';
+}
+
+.container1 {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    position: relative;
+    width: 550px;
+    height: 80vh;
+    border-radius: 40px;
+    box-sizing: border-box;
+    background: #ecf0f3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset  24px 24px 32px #cbced1, inset -24px -24px 32px white;
+    box-shadow: inset 16px 16px 16px #ffffff, inset -16px -16px 16px #cbced1;
+    box-shadow: inset 16px 16px 16px #ffffff, inset -16px -16px 16px #cbced1;
+}
+
+.heading{
+    color: rgb(2, 2, 2);
+}
+
+#titleCreateProject{
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem ;
+    font-weight: 600;
+}
+
+.container #createProjectForm{
+    display:flex;
+    flex-direction:column;
+}
+
+input::placeholder {
+    color: gray;
+    font-size: 1.3rem;
+}
+
+textarea::placeholder {
+    color: gray;
+    font-size: 1.3rem;
+}
+#nameP{
+    height: 2.1rem;
+    width:370px;
+    margin-bottom: 1rem;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    overflow-x: hidden;
+}
+.namep{
+    color: rgb(99, 24, 24);
+    color: #a40000;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 1.3rem;
+}
+#nameP::-webkit-scrollbar{
+    width: 1rem;
+}
+input {
+    display: block;
+    width:400px;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+  
+
+#nameP,.margin {
+    background: #ecf0f3;
+    padding: 10px;
+    padding-left: 20px;
+    font-size: 14px;
+    border-radius: 50px;
+    box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+}
+  
+
+.container #createProjectForm input[type="text"]{
+    padding:1rem 2.5rem;
+    width:400px;
+    font-size: 1.3rem;
+    transition: all .2s ease-in-out;
+    box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+}
+.container #createProjectForm input[type="text"]:focus{
+    scale: 1.05;
+    transition: all .2s ease-in-out;
+    box-shadow: inset 6px 6px 6px #ffffff, inset -6px -6px 6px rgb(157, 153, 153);
+}
+.container #createProjectForm input[type="submit"]{
+    color: #000000 ;
+    font-weight: 500;
+    padding:1rem 2.5rem;
+    font-size: 1.5rem;
+    margin-top:1rem;
+    justify-content: center;
+    align-items: center;
+    background-color: #6f7d7d;
+    transition: all .2s ease-in-out;
+    box-shadow: inset 6px 6px 6px #424646, inset -6px -6px 6px rgb(157, 153, 153);
+    cursor:pointer;
+}
+
+#bnt:active {
+    scale: 0.9;
+    color: black;
+    background-color: grey;
+    box-shadow: 0 0 10px 40px rgb(170, 170, 170);
+    animation: flashBackground2 0.4s linear;
+    opacity: 0.8;
+}
+
+@keyframes flashBackground2 {
+    0% {
+        background-color: black;
+        scale: 1.1;
+    }
+    50% {
+        background-color: #6b6b6b;
+        scale: 0.8;
+
+    }
+    100% {
+        background-color: rgb(174, 174, 174);
+        scale: 0.6;
+    }
+}
+
+.container #createProjectForm input[type="submit"]:hover{
+    scale: 1.05;
+    color: #ffffff;
+    transition: all .2s ease-in-out;
+    background-color: rgb(0, 0, 0);
+    box-shadow: inset 6px 6px 6px #000000, inset -6px -6px 6px rgb(60, 60, 60);
+}
+.container #createProjectForm textarea{
+    color: black;
+    margin:1rem 0;
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    background: #ecf0f3;
+    border-radius: 30px;
+    box-sizing: border-box;
+    box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+    transition: all .2s ease-in-out;
+}
+.container #createProjectForm textarea:focus{
+    scale: 1.05;
+    transition: all .2s ease-in-out;
+    box-shadow: inset 6px 6px 6px #ffffff, inset -6px -6px 6px rgb(157, 153, 153);
+}

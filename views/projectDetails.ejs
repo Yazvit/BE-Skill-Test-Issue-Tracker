@@ -1,0 +1,103 @@
+<div class="container" id="additional2">
+    <p class="heading">Project Details</p>
+  
+    <!-- Inner Container -->
+    <div class="detailsContainer" styles="width: 90%;">
+  
+      <!-- Project Details Section -->
+      <div class="projectDetailSection">
+        <p class="projectName"><%- project.projectName %></p>
+        <p class="projectDesc"><%- project.description %></p>
+        <div class="createIssueAndAuthor">
+          <p class="projectAuthor">
+            Author: <span class="name"><em><%- project.authorName %></em></span>
+          </p>
+          <div class="tooltip tooltipCIProjectDetails"><p>Create Issue</p></div>
+        </div>
+        <div style="margin:1rem auto; display:flex;justify-content: center;">
+          <a class="pdCreateIssueLink" id="bnt2"  href="../create_issue/<%- project.id %>">
+            Create New Issue
+          </a>
+        </div>
+      </div>
+  
+      <!-- Functionality Section (Search and Filter) -->
+      <div class="functionality" id="functionality" >
+        <div class="btnSection">
+
+          <!-- Filter by Label -->
+            <div id="filterSection" class="filterSection">
+                <div class="head">Filter:</div>
+                <div style="display: flex; align-items: center" class="checkbox-wrapper-1">
+                    <input type="checkbox" class="substituted" aria-hidden="true" id="bug" value="Bug" />
+                    <label for="bug" class="spaceRight">Bug</label>
+                    <input type="checkbox" class="substituted" aria-hidden="true" id="typeError" value="Type Error" />
+                    <label for="typeError"  class="spaceRight">Type Error</label>
+                    <input type="checkbox" class="substituted" aria-hidden="true" id="ui" value="UI" />
+                    <label for="ui"  class="spaceRight"> UI </label>
+                    <input type="checkbox" class="substituted" aria-hidden="true" id="syntaxError" value="Syntax Error" />
+                    <label for="syntaxError"  class="spaceRight">Syntax Error</label>
+                    <input type="checkbox" class="substituted" aria-hidden="true" id="others" value="Others" />
+                    <label for="others"  class="spaceRight">Others</label>
+                    <button class="filterButton" id="filterButton">Filter</button>
+                </div>
+            </div>
+          <!-- Filter By Author -->
+          <div id="filterSectionByAuthor" class="filterSection">
+            <div class="head">Filter (Author):</div>
+            <div id="authorsList" style="display: flex; align-items: center; margin-left:4rem; ">
+              <!-- Rendering the list of issues based on the length of array -->
+              <% if(project.issues.length > 0 ){ %>
+                <select name="" id="label" style="width: 13rem; height: 1.5rem ; border: 1px solid rgb(132, 46, 46); border-radius: 0.3rem;">
+                  <!-- Making a loop over each issue -->
+                <% project.issues.forEach((issue)=>{ %>
+                    <option class="option" value="<%- issue.issueAuthor%>"><%- issue.issueAuthor%></option>
+                  <% }) %> 
+                </select>
+              <% } else{ %>  
+                <select name="" id="">
+                  <option value="create issue">Create Issue</option>
+                </select>
+             <% } %>
+              <button class="filterButton" id="filterButtonByAuthor" id="filterbtn">Filter</button>
+            </div>
+          </div>
+  
+          <!-- Search Section -->
+          <div id="searchSection" class="searchSection">
+            <div class="head1">
+              <input id="searchBar" class="searchBar" class="margin" type="text" placeholder="Search by keywords ..." />
+              <button class="searchButton" id="searchButton">Search</button>
+            </div>
+          </div>
+        </div>
+
+        <hr style="margin:.5rem 0;">
+  
+        <!-- Bug Section -->
+        <div class="bugSection" id="bugSection">
+          <% if(project.issues.length > 0 ){ %>
+            <!-- Rendering bugs based on search result -->
+              <% project.issues.forEach((issue)=>{ %>
+  
+                  <div class="bug">
+                      <p class="title">Title&nbsp;:&nbsp <span class="name"><%- issue.title %></span></p>
+                      <p class="description">Description&nbsp;:&nbsp; <%- issue.description %></p>
+                      <p class="label">Label&nbsp;:&nbsp; <%- issue.label %></p>
+                      <p class="author">Author&nbsp;: <em style="color:  #b60707;"><%- issue.issueAuthor %></em></p>
+                     </div>
+                <% }) %> 
+            <% } else{ %>  
+              <h1 class="noIssueFound">No Issues Found</h1>
+           <% } %>
+          
+         
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- To grab data in js file -->
+  <input type="hidden" id="dataFromServer" value="<%= JSON.stringify(project) %>">
+  
+  <!-- Js File -->
+  <script src="/js/projectDetails.js"></script>

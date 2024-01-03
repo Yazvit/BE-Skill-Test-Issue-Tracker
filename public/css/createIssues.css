@@ -1,0 +1,78 @@
+#subBtn:active {
+    scale: 0.9;
+    color: black;
+    background-color: grey;
+    box-shadow: 0 0 10px 40px rgb(170, 170, 170);
+    animation: flashBackground3 0.4s linear;
+    opacity: 0.8;
+}
+
+@keyframes flashBackground3 {
+    0% {
+        background-color: black;
+        scale: 1.1;
+    }
+    50% {
+        background-color: #6b6b6b;
+        scale: 0.8;
+
+    }
+    100% {
+        background-color: rgb(174, 174, 174);
+        scale: 0.6;
+    }
+}
+
+.createIssueContainer{
+    display: flex;
+    flex-direction: column;
+}
+.labelContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0rem;
+}
+.container #labelDropdown{
+    color: brown;
+    padding-top:  0.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-left: 4rem;
+}
+.container select{
+    width: 50%;
+    color: rgb(104, 26, 26);
+    color: black;
+    background: rgb(185, 185, 185);
+    margin-right: 16%;
+    border-radius: 5px;
+    transition: all .2s ease-in-out;
+}
+.container select:focus{
+    border-radius: 1rem;
+}
+.labelContainer{
+    display:flex;
+    justify-content: space-between;
+}
+.container select option{
+    font-size: 1rem;
+    padding:  .4rem 0;
+}
+
+
+#label{
+    margin-top: 0.5rem;
+    padding:  0.3rem;
+    font-size: 1rem;
+}
+
+#label .option{
+    padding:.5rem;
+    background-color: #b4b4b4;   
+}
+/* #label .option:hover{
+    
+} */
+
