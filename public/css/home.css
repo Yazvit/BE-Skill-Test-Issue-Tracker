@@ -49,12 +49,12 @@ i.fa-solid.fa-plus:hover{
     width: 90%;
     overflow-y: scroll;
 }
-//.container .projectContainer::-webkit-scrollbar {
+.container .projectContainer::-webkit-scrollbar {
     width: 15px;
     background-color: #6b6b6b;
     border-radius: 30px;
 }
-//.container .projectContainer::-webkit-scrollbar-thumb {
+.container .projectContainer::-webkit-scrollbar-thumb {
     background-color: #2f2f2f;
     border-radius: 30px;
 }
