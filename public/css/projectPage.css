@@ -1,18 +1,17 @@
 .detailsContainer {
-    width: 90vw;
-    margin-left: 5vw;
-    margin-right: 5vw;
-    height: 75vh;
+    width: 80vw;
+    margin-left:  10vw;
+    margin-right: 10vw;
+    height: auto;
     flex-wrap: wrap;
-    background: #ffffff;
-    border: 2px solid rgb(150, 4, 4);
+    background: rgb(255, 255, 255);
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
     padding: 1rem;
-    border-radius: 2rem;
-    box-shadow: inset 6px 6px 6px #ffffff, inset -6px -6px 6px rgb(157, 153, 153);
-    border: none;
+    border-radius: 3rem;
+    box-shadow: var(--clr-box-shadow);
+    border: 2px solid rgb(184, 184, 184);
     margin-bottom: 2rem;
     overflow-y: scroll;
 
@@ -237,16 +236,16 @@
 
 @media screen and (max-width:1792px) {
     .detailsContainer {
-        width: 90%;
+        width: 80%;
         height:65vh;
     }
 }
 @media screen and (max-width:1530px) {
     .detailsContainer {
-        width: 90%;
+        width: 80%;
         height:65vh;
-        margin-left:  5vw;
-        margin-right: 5vw;
+        margin-left:  10vw;
+        margin-right: 10vw;
     }
     .projectDetailSection {
         width: 90%;

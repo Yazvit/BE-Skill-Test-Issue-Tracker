@@ -15,7 +15,7 @@ body {
     height: 100vh;
     background: #8f979d;
     background: #888888;
-    background: #ecf0f3;
+    background: #4b4949;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,13 +39,12 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: inset  24px 24px 32px #cbced1, inset -24px -24px 32px white;
-    box-shadow: inset 16px 16px 16px #ffffff, inset -16px -16px 16px #cbced1;
-    box-shadow: inset 16px 16px 16px #ffffff, inset -16px -16px 16px #cbced1;
+    box-shadow: var(--clr-box-shadow);
 }
 
 .heading{
     color: rgb(2, 2, 2);
+    text-shadow: var(--clr-text-shadow);
 }
 
 #titleCreateProject{

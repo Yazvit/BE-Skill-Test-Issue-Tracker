@@ -36,7 +36,6 @@ i.fa-solid.fa-plus:hover{
     border: 3px solid rgb(116, 12, 12);
 }
 .container .heading {
-    color: #008ce3;
     color: rgb(136, 0, 0);
     color: #000000;
     font-size: 2.3rem;
@@ -50,17 +49,17 @@ i.fa-solid.fa-plus:hover{
     width: 90%;
     overflow-y: scroll;
 }
-.container .projectContainer::-webkit-scrollbar {
+//.container .projectContainer::-webkit-scrollbar {
     width: 15px;
     background-color: #6b6b6b;
     border-radius: 30px;
 }
-.container .projectContainer::-webkit-scrollbar-thumb {
+//.container .projectContainer::-webkit-scrollbar-thumb {
     background-color: #2f2f2f;
     border-radius: 30px;
 }
 .container .projectContainer .box {
-    background: #ffffff;
+    background: rgb(251, 253, 255);
     width: 70%;
     height: 250px;
     border: 2px solid black;
@@ -69,7 +68,8 @@ i.fa-solid.fa-plus:hover{
     justify-content: center;
     padding: 2rem;
     border-radius: 2rem;
-    box-shadow: inset 6px 6px 6px #ffffff, inset -6px -6px 6px rgb(157, 153, 153);
+    box-shadow: inset 16px 16px 16px #f0f0f0, inset -16px -16px 16px rgb(185, 181, 181);
+    box-shadow: var(--clr-box-shadow);
     border: none;
     margin-top: 0.5rem;
     margin-bottom: 2rem;
@@ -80,7 +80,6 @@ i.fa-solid.fa-plus:hover{
     padding-bottom: 0.5rem;
     font-size: 1.6rem;
     /* color:#2cc810; */
-    color: #1ea9ff;
     color: brown;
     font-weight: 600;
     overflow-y: scroll;
@@ -122,6 +121,7 @@ i.fa-solid.fa-trash {
     background: rgb(126, 5, 5);
 }
 .box .boxFooter {
+    margin-bottom: 1rem;
     display: flex;
     flex-direction: row;
     font-weight: 600;
@@ -129,7 +129,6 @@ i.fa-solid.fa-trash {
     align-items: center;
 }
 .box .boxFooter .name{
-    color: #008ce3;
     color: rgb(168, 37, 37);
     font-size: 1.5rem;
     font-weight:  600;
