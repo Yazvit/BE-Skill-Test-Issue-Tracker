@@ -47,7 +47,7 @@ i.fa-solid.fa-plus:hover{
     flex-wrap: wrap;
     justify-content: center;
     width: 90%;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 .container .projectContainer::-webkit-scrollbar {
     width: 15px;
